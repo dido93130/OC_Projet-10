@@ -67,20 +67,18 @@ const Page = () => {
             </ServiceCard>
           </div>
         </section>
-        <section className="EventsContainer">
+        <section className="EventsContainer" data-testid="event-list">
           <h2 className="Title" id="nos-realisations">
             Nos réalisations
-          </h2>
-          <div data-testid="event-list">.
-          <EventList />
-          </div>
+          </h2>          
+          <EventList />         
         </section>
-        <section className="PeoplesContainer">
+        <section className="PeoplesContainer" data-testid="people-list">
           <h2 className="Title" id="notre-equipe">
             Notre équipe
           </h2>
           <p>Une équipe d’experts dédiés à l’ogranisation de vos événements</p>
-          <div data-testid="people-list" className="ListContainer">
+          <div className="ListContainer">
             <PeopleCard
               imageSrc="/images/stephanie-liverani-Zz5LQe-VSMY-unsplash.png"
               name="Samira"
@@ -137,10 +135,9 @@ const Page = () => {
           </Modal>
         </div>
       </main>
-      <footer className="row">
-        <div className="col presta">
-          <h3>Notre derniére prestation</h3>
-          <div data-testid="last-event">
+      <footer className="row" data-testid="Footer">
+        <div className="col presta" data-testid="last-event">
+          <h3>Notre derniére prestation</h3>          
           {last && (
             <EventCard
               data-testid="last-event-card"
@@ -152,8 +149,7 @@ const Page = () => {
               label={last?.type}
             />            
           )}
-          </div>
-        </div>
+          </div>        
         <div className="col contact">
           <h3>Contactez-nous</h3>
           <address>45 avenue de la République, 75000 Paris</address>
